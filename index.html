@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Live Metronome</title>
+</head>
+<body>
+    <main class="container">
+        <div class="metronome">
+            <div class="bpm-display">
+                <div class="tempo"></div>
+                <div class="bpm">BPM</div>
+            </div>
+            <div class="tempo-text">Allegro</div>
+            <div class="tempo-settings">
+                <div class="adjust-tempo-btn decrease-tempo tap">-</div>
+                <input type="range" min="20" max="280" step="1" class="slider">
+                <div class="adjust-tempo-btn increase-tempo tap">+</div>
+            </div>
+            <div class="start-stop">START</div>
+            <div class="measure-settings">
+                <div class="measures">
+                    <div class="substract-beats stepper tap">-</div>
+                    <div class="measure-count"></div>
+                    <div class="add-beats stepper tap">+</div>
+                </div>
+                <div class="beats-per-measure-text">Beats per measure</div>
+                <div class="first-beat">
+                    <span class="accent accent-selected tap"></span>
+                    <span class="beats-per-measure-text">Accentuate first beat</span>
+                </div>
+            </div>
+        </div>
+    </main> 
+    <script src="./scripts/app.js" type="module"></script>
+</body>
+</html>
