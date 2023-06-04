@@ -9,9 +9,17 @@
 body {
     font-family: 'Exo 2', sans-serif;
     color: #444;
-    user-select: none;
-    -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+label {
+    visibility: hidden;
 }
 
 .container {
@@ -24,8 +32,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 450px;
+    height: 75dvh;
     width: 400px;
+    min-height: 450px;
+    max-height: 600px;
 }
 .bpm-display {
     width: 100%;
@@ -143,11 +153,12 @@ input[type=range]::-moz-range-track {
     margin: 0 10px;
     cursor: pointer;
 }
-.first-beat {
+.accents-field {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    height: 3em;
 }
 .beats-per-measure-text {
     text-align: center;
@@ -159,9 +170,9 @@ input[type=range]::-moz-range-track {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     text-align: center;
-    margin: 0 10px 0 0;
+    margin: 0 5px;
 }
 .accent-selected {
     background: #FF6F59;
@@ -182,7 +193,10 @@ input[type=range]::-moz-range-track {
         background: #FF6F59;
         color: #fff;
     }
-    .first-beat:hover .accent {
+    /* .first-beat:hover .accent {
+        background: #63A375;
+    } */
+    .accent:hover {
         background: #63A375;
     }
     .tempo-settings .adjust-tempo-btn:hover {

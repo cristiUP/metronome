@@ -1,5 +1,5 @@
 class Metronome {
-    constructor(tempo = 150, beatsPerBar = 4, accent = true)
+    constructor(tempo = 150, beatsPerBar = 4, accent = [true, false, false, false])
     {
         this.audioContext = null;
         this.notesInQueue = [];         // notes that have been put into the web audio and may or may not have been played yet {note, time}
@@ -34,7 +34,7 @@ class Metronome {
         const oscillator = this.audioContext.createOscillator();
         const envelope = this.audioContext.createGain();
     
-        oscillator.frequency.value = (this.accent && beatNumber % this.beatsPerBar == 0) ? 1000 : 800; // value in hertz for click sound
+        oscillator.frequency.value = (this.accent[beatNumber]) ? 1000 : 800; // value in hertz for click sound
         envelope.gain.value = 1;
         envelope.gain.exponentialRampToValueAtTime(1, time + 0.001);
         envelope.gain.exponentialRampToValueAtTime(0.001, time + 0.02);
@@ -83,5 +83,3 @@ class Metronome {
         }
     }
 }
-
-export default Metronome;
