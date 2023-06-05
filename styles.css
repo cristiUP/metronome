@@ -193,9 +193,6 @@ input[type=range]::-moz-range-track {
         background: #FF6F59;
         color: #fff;
     }
-    /* .first-beat:hover .accent {
-        background: #63A375;
-    } */
     .accent:hover {
         background: #63A375;
     }

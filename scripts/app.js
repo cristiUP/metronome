@@ -17,7 +17,7 @@ let metronome = new Metronome();
 tempoDisplay.textContent = metronome.tempo;
 measureCount.textContent = metronome.beatsPerBar;
 
-// loaded the first 4 beats for accents
+// loaded the initial 4 beats for accents
 window.addEventListener('load', () => {
   displayBeats();
 });
